@@ -19,6 +19,7 @@ require(__DIR__ . "/../../partials/nav.php");
 
         return true;
     }
+
 </script>
 <?php
 //TODO 2: add PHP Code
@@ -31,7 +32,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
     if (empty($email)) {
         echo "Email must not be empty";
         $hasError = true;
-    }
+    }   
     //sanitize
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
     //validate
