@@ -136,7 +136,6 @@ $username = get_username();
             innerDiv.innerText = "Password and Confirm password must match";
 
             outerDiv.appendChild(innerDiv);
-            //add the element to the DOM (if we don't it merely exists in memory)
             flash.appendChild(outerDiv);
             isValid = false;
         }
