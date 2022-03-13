@@ -1,18 +1,16 @@
 # Project Name:Simple Bank
 ## Project Summary:This project will create a bank simulation for users. They’ll be able to have various accounts, do standard bank functions like deposit, withdraw, internal (user’s accounts)/external(other user’s accounts) transfers, and creating/closing accounts
-## Github Link: [https://github.com/Isaag1/IT202-004/tree/Milestone1/public_html/Project](https://github.com/Isaag1/IT202-004/tree/Milestone1/public_html/Project)
+## Github Link:[https://github.com/Isaag1/IT202-004/tree/Milestone1/public_html/Project](https://github.com/Isaag1/IT202-004/tree/Milestone1/public_html/Project)
 ## Project Board Link:
-## Website Link: https://iag8-prod.herokuapp.com/Project
-## Your Name: Isaac Guerrero
+## Website Link:https://iag8-prod.herokuapp.com/Project
+## Your Name:Isaac Guerrero
 
 <!-- Line item / Feature template (use this for each bullet point) -- DO NOT DELETE THIS SECTION
 
-
-- [ ] \(mm/dd/yyyy of completion) Feature Title (from the proposal bullet point, if it's a sub-point indent it properly)
+- [x] \(mm/dd/yyyy of completion) Feature Title (from the proposal bullet point, if it's a sub-point indent it properly)
   -  Link to related .md file: [Link Name](link url)
 
  End Line item / Feature Template -- DO NOT DELETE THIS SECTION --> 
- 
  
 ### Proposal Checklist and Evidence
 
