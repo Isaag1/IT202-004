@@ -19,7 +19,8 @@ function isValidUsername(username){
     return pattern.test(username);
 }
 function isValidEmail(email){
-   
+    const pattern = /@/;
+    return pattern.test(email);
 }
 function isValidPassword(password){
     if(!password){
