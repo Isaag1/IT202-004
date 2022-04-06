@@ -15,24 +15,34 @@
 ### Proposal Checklist and Evidence
 
 - Milestone 1
-    - [x] \(03/12/2022 of completion) User will be able to register a new account
-        -  Link to related .md file: [Link Name](link url)
-    - [x] \(03/12/2022 of completion) User will be able to login to their account (given they enter the correct credentials)
-        -  Link to related .md file: [Link Name](link url)
-    - [x] \(03/12/2022 of completion) User will be able to logout
-        -  Link to related .md file: [Link Name](link url)
-    - [x] \(03/12/2022 of completion) Basic security rules implemented
-        -  Link to related .md file: [Link Name](link url)
-    - [x] \(03/12/2022 of completion) Basic Roles implemented
-        -  Link to related .md file: [Link Name](link url)
-    - [x] \(03/12/2022 of completion) Site should have basic styles/theme applied; everything should be styled
-        -  Link to related .md file: [Link Name](link url)
-    - [x] \(03/12/2022 of completion) Any output messages/errors should be “user friendly”
-        -  Link to related .md file: [Link Name](link url)
-    - [x] \(03/12/2022 of completion) User will be able to see their profile
-        -  Link to related .md file: [Link Name](link url)
-    - [x] \( of completion) User will be able to edit their profile
-        -  Link to related .md file: [Link Name](link url)
+    - [x] \(02/28/2022) User will be able to register a new account
+        -  [Milestone 1](https://github.com/Isaag1/IT202-004/blob/Milestone1/public_html/Project/milestone1.md)
+        - [https://iag8-prod.herokuapp.com/Project/register.php](https://iag8-prod.herokuapp.com/Project/register.php)
+    - [x] \(02/28/2022) User will be able to login to their account (given they enter the correct credentials)
+        -  [Milestone 1](https://github.com/Isaag1/IT202-004/blob/Milestone1/public_html/Project/milestone1.md)
+        - [https://iag8-prod.herokuapp.com/Project/login.php]https://iag8-prod.herokuapp.com/Project/login.php
+    - [x] \(03/09/2022) User will be able to logout
+        -  [Milestone 1](https://github.com/Isaag1/IT202-004/blob/Milestone1/public_html/Project/milestone1.md)
+        - [https://iag8-prod.herokuapp.com/Project/logout.php]https://iag8-prod.herokuapp.com/Project/logout.php
+    - [x] \(03/12/2022) Basic security rules implemented
+        -  [Milestone 1](https://github.com/Isaag1/IT202-004/blob/Milestone1/public_html/Project/milestone1.md)
+        - [https://iag8-prod.herokuapp.com/Project/profile.php](https://iag8-prod.herokuapp.com/Project/profile.php)
+    - [x] \(4/3/2022) Basic Roles implemented
+        -  [Milestone 1](https://github.com/Isaag1/IT202-004/blob/Milestone1/public_html/Project/milestone1.md)
+        - [https://iag8-prod.herokuapp.com/Project/admin/create_role.php](https://iag8-prod.herokuapp.com/Project/admin/create_role.php)
+    - [x] \(02/28/2022 & 04/03/2022) Site should have basic styles/theme applied; everything should be styled
+        -  [Milestone 1](https://github.com/Isaag1/IT202-004/blob/Milestone1/public_html/Project/milestone1.md)
+        - [https://iag8-prod.herokuapp.com/Project/home.php](https://iag8-prod.herokuapp.com/Project/home.php)
+        - [https://iag8-prod.herokuapp.com/Project/styles.css](https://iag8-prod.herokuapp.com/Project/style.css)
+    - [x] \(03/09/2022) Any output messages/errors should be “user friendly”
+        -  [Milestone 1](https://github.com/Isaag1/IT202-004/blob/Milestone1/public_html/Project/milestone1.md)
+        - [https://iag8-prod.herokuapp.com/Project/logout.php](https://iag8-prod.herokuapp.com/Project/logout.php)
+    - [x] \(03/12/2022) User will be able to see their profile
+        -  [Milestone 1](https://github.com/Isaag1/IT202-004/blob/Milestone1/public_html/Project/milestone1.md)
+        - [https://iag8-prod.herokuapp.com/Project/profile.php](https://iag8-prod.herokuapp.com/Project/profile.php)
+    - [x] \(03/09/2022) User will be able to edit their profile
+        -  [Milestone 1](https://github.com/Isaag1/IT202-004/blob/Milestone1/public_html/Project/milestone1.md)
+        - [https://iag8-prod.herokuapp.com/Project/profile.php](https://iag8-prod.herokuapp.com/Project/profile.php)
 - Milestone 2
   - (duplicate template here for Milestone 1 features)
 - Milestone 3
