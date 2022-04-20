@@ -16,7 +16,6 @@ require(__DIR__ . "/../../partials/nav.php");
         <input type="submit" class="mt-3 btn btn-primary" value="Login" />
     </form>
 </div>
-    <input type="submit" value="Login" />
 </form>
 <script>
     function validate(form) {

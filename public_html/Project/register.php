@@ -25,7 +25,6 @@ reset_session();
         <input type="submit" class="mt-3 btn btn-primary" value="Register" />
     </form>
 </div>
-    <input type="submit" value="Register" />
 </form>
 <script>
     function validate(form) {
