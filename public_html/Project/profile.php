@@ -94,7 +94,7 @@ $email = get_user_email();
 $username = get_username();
 ?>
 <form method="POST" onsubmit="return validate(this);">
-<div class="container-fluid">
+    <div class="container-fluid">
     <h1>Profile</h1>
     <form method="POST" onsubmit="return validate(this);">
         <div class="mb-3">
@@ -122,7 +122,6 @@ $username = get_username();
         <input type="submit" class="mt-3 btn btn-primary" value="Update Profile" name="save" />
     </form>
 </div>
-    <input type="submit" value="Update Profile" name="save" />
 </form>
 
 <script>
