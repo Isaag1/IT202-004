@@ -44,8 +44,22 @@
         -  [Milestone 1](https://github.com/Isaag1/IT202-004/blob/Milestone1/public_html/Project/milestone1.md)
         - [https://iag8-prod.herokuapp.com/Project/profile.php](https://iag8-prod.herokuapp.com/Project/profile.php)
 - Milestone 2
-  - (duplicate template here for Milestone 1 features)
-- Milestone 3
+    - [] \(mm/dd/yyyy of completion) Create the Accounts table (id, account_number [unique, always 12 characters], user_id, balance (default 0), account_type, created, modified)
+  -  Link to related .md file: [Link Name](link url)
+    - [] \(mm/dd/yyyy of completion) Create the Transactions table (see reference at end of document)
+  -  Link to related .md file: [Link Name](link url)
+    - [] \(mm/dd/yyyy of completion) Dashboard page
+  -  Link to related .md file: [Link Name](link url)
+    - [] \(mm/dd/yyyy of completion) User will be able to create a checking account
+  -  Link to related .md file: [Link Name](link url)
+    - [] \(mm/dd/yyyy of completion) User will be able to list their accounts
+  -  Link to related .md file: [Link Name](link url)
+    - [] \(mm/dd/yyyy of completion) User will be able to click an account for more information (a.k.a Transaction History page)
+  -  Link to related .md file: [Link Name](link url)
+    - [] \(mm/dd/yyyy of completion) User will be able to deposit/withdraw from their account(s)
+  -  Link to related .md file: [Link Name](link url)
+  
+  - Milestone 3
   - (duplicate template here for Milestone 1 features)
 - Milestone 4
   - (duplicate template here for Milestone 1 features)
