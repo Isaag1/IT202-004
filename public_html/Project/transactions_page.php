@@ -31,7 +31,7 @@ $query = "SELECT distinct trans_type FROM Transactions";
 $stmt = $db->prepare($query);
 $stmt->execute();
 $types = $stmt->fetchAll();
-
+//.
 $query = "SELECT created FROM Transactions WHERE created BETWEEN CAST('2021-12-18' AS DATE) AND CAST('2021-12-21' AS DATE)";
 $stmt = $db->prepare($query);
 $stmt->execute();
