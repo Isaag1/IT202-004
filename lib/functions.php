@@ -9,6 +9,7 @@ function se($v, $k = null, $default = "", $isEcho = true)
         $returnValue = $v->$k;
     } else {
         $returnValue = $v;
+       
         if (is_array($returnValue) || is_object($returnValue)) {
             $returnValue = $default;
         }
@@ -41,7 +42,7 @@ function is_logged_in($redirect = false, $destination = "login.php")
         flash("You must be logged in to view this page", "warning");
         die(header("Location: $destination"));
     }
-    return $isLoggedIn; //se($_SESSION, "user", false, false);
+    return $isLoggedIn; 
 }
 function has_role($role)
 {
@@ -56,7 +57,7 @@ function has_role($role)
 }
 function get_username()
 {
-    if (is_logged_in()) {
+    if (is_logged_in()) { 
         return se($_SESSION["user"], "username", "", false);
     }
     return "";
@@ -77,7 +78,7 @@ function get_lastname()
 }
 function get_user_email()
 {
-    if (is_logged_in()) {
+    if (is_logged_in()) { 
         return se($_SESSION["user"], "email", "", false);
     }
     return "";
@@ -165,6 +166,7 @@ function get_random_str($length)
 function refresh_account_balance($id)
 {
     if (is_logged_in()) {
+        //cache account balance via BGD_Bills_History history
         $query = "UPDATE Accounts set balance = (SELECT IFNULL(SUM(bal_change), 0) from Transactions WHERE account_src = :src) where id = :src";
         $db = getDB();
         $stmt = $db->prepare($query);
@@ -213,6 +215,7 @@ function do_bank_action($account1, $account2, $amountChange, $type, $memo = ""){
     $stmt->bindValue(":type", $type);
     $stmt->bindValue(":a2total", $a2total);
     $result = $stmt->execute();
+  
     refresh_account_balance($account1);
     refresh_account_balance($account2);
     return $result;
