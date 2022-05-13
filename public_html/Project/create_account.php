@@ -47,7 +47,6 @@ $accounts = $stmt->fetchAll();
 </form>
 <script>
     function validate(form) {
-        // JavaScript code
         var minDep = form.deposit.value;
         var accType = form.account.value;
 

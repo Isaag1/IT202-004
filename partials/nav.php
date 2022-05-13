@@ -9,7 +9,6 @@ if (($localWorks && $domain == "localhost") || $domain != "localhost") {
     session_set_cookie_params([
         "lifetime" => 60 * 60,
         "path" => "/Project",
-        //"domain" => $_SERVER["HTTP_HOST"] || "localhost",
         "domain" => $domain,
         "secure" => true,
         "httponly" => true,
@@ -35,7 +34,7 @@ $db = getDB();
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto">
                 <?php if (is_logged_in()) : ?>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('dashboard.php'); ?>">Dashboard</a></li>
                 <?php endif; ?>

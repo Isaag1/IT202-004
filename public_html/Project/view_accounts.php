@@ -39,7 +39,7 @@ $accounts = $stmt->fetchAll();
     }
 
     #type:hover {
-        color: yellow;
+        color: red;
         text-decoration: underline;
     }
 </style>
