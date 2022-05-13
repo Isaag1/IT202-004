@@ -9,7 +9,7 @@ function se($v, $k = null, $default = "", $isEcho = true)
         $returnValue = $v->$k;
     } else {
         $returnValue = $v;
-       
+  
         if (is_array($returnValue) || is_object($returnValue)) {
             $returnValue = $default;
         }
@@ -71,7 +71,7 @@ function get_firstname()
 }
 function get_lastname()
 {
-    if (is_logged_in()) { 
+    if (is_logged_in()) {
         return se($_SESSION["user"], "last_name", "", false);
     }
     return "";
@@ -134,11 +134,10 @@ function users_check_duplicate($errorInfo)
     }
 }
 function redirect($path)
-{ //header headache
+{ 
     //https://www.php.net/manual/en/function.headers-sent.php#90160
     /*headers are sent at the end of script execution otherwise they are sent when the buffer reaches it's limit and emptied */
     if (!headers_sent()) {
-        //php redirect
         die(header("Location: " . get_url($path)));
     }
     echo "<script>window.location.href='" . get_url($path) . "';</script>";
@@ -157,8 +156,7 @@ function get_url($dest)
 function get_random_str($length)
 {
     //https://stackoverflow.com/a/13733588
-    //$bytes = random_bytes($length / 2);
-    //return bin2hex($bytes);
+   
 
     //https://stackoverflow.com/a/40974772
     return substr(str_shuffle(str_repeat('0123456789abcdefghijklmnopqrstvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', 36)), 0, $length);
@@ -166,7 +164,6 @@ function get_random_str($length)
 function refresh_account_balance($id)
 {
     if (is_logged_in()) {
-        //cache account balance via BGD_Bills_History history
         $query = "UPDATE Accounts set balance = (SELECT IFNULL(SUM(bal_change), 0) from Transactions WHERE account_src = :src) where id = :src";
         $db = getDB();
         $stmt = $db->prepare($query);
@@ -195,7 +192,7 @@ function do_bank_action($account1, $account2, $amountChange, $type, $memo = ""){
     $stmt->execute([":account_id" => $account2]);
     $a2total = se($stmt->fetch(), "balance", 0, false);
 
-    $a1total += ($amountChange*-1);
+  /*  $a1total += ($amountChange*-1);
     $a2total += $amountChange;
 
     $query = "INSERT INTO `Transactions` (`account_src`, `account_des`, `bal_change`, `trans_type`, `exp_total`, `memo`) 
@@ -215,7 +212,7 @@ function do_bank_action($account1, $account2, $amountChange, $type, $memo = ""){
     $stmt->bindValue(":type", $type);
     $stmt->bindValue(":a2total", $a2total);
     $result = $stmt->execute();
-  
+   
     refresh_account_balance($account1);
     refresh_account_balance($account2);
     return $result;
@@ -232,5 +229,5 @@ function calculate_apy($trans) {
 
 function frand($min, $max, $decimals = 0) {
     $scale = pow(10, $decimals);
-    return mt_rand($min * $scale, $max * $scale) / $scale;
+    return mt_rand($min * $scale, $max * $scale) / $scale;*/
 }

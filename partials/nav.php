@@ -9,6 +9,7 @@ if (($localWorks && $domain == "localhost") || $domain != "localhost") {
     session_set_cookie_params([
         "lifetime" => 60 * 60,
         "path" => "/Project",
+        //"domain" => $_SERVER["HTTP_HOST"] || "localhost",
         "domain" => $domain,
         "secure" => true,
         "httponly" => true,
@@ -22,6 +23,7 @@ $db = getDB();
 
 
 ?>
+<!-- include css and js files -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="<?php echo get_url('styles.css'); ?>">
@@ -47,9 +49,9 @@ $db = getDB();
                             Admin Roles
                         </a>
                         <ul class="dropdown-menu bg-warning" aria-labelledby="rolesDropdown">
-                            <li><a class="dropdown-item" href="<?php echo get_url('admin/create_role.php'); ?>">Create Roles</a></li>
+                            <li><a class="dropdown-item" href="<?php echo get_url('admin/create_role.php'); ?>">Create</a></li>
                             <li><a class="dropdown-item" href="<?php echo get_url('admin/list_roles.php'); ?>">List</a></li>
-                            <li><a class="dropdown-item" href="<?php echo get_url('admin/assign_roles.php'); ?>">Assign Roles</a></li>
+                            <li><a class="dropdown-item" href="<?php echo get_url('admin/assign_roles.php'); ?>">Assign</a></li>
                             <li><a class="dropdown-item" href="<?php echo get_url('admin/search_users.php'); ?>">Search Users</a></li>
                         </ul>
                     </li>

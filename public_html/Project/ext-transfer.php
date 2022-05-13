@@ -1,35 +1,46 @@
 <?php
-error_log("data: " . var_export($_GET, true));
 require(__DIR__ . "/../../partials/nav.php");
 is_logged_in(true);
 
 $db = getDB();
 $stmt = $db->prepare("SELECT id, account_number, balance, account_type, active FROM Accounts WHERE user_id = :uid");
 //$stmt->execute([":uid" => get_user_id()]);
-$accounts = $stmt->fetchAll();
-?>
+$myAccounts = $stmt->fetchAll();
 
+$lastName = se($_POST, "last_name", "", false);
+$account_id2 = se($_POST, "id", "", false);
+$act_num2 = se($_POST, "account2", "", false);
+
+$query = "SELECT b.id FROM Accounts b JOIN Users a on b.user_id = a.id WHERE a.last_name = :ln and b.account_number like :act_num";
+$stmt = $db->prepare($query);
+$stmt->execute([":ln" => $lastName, ":act_num" => "%$act_num2"]);
+$yourAccount = se($stmt->fetch(), "id", "", false);
+?>
+<style>
+    h3 {
+        color: white;
+    }
+</style>
 <h1>Transfer Funds</h1>
 <form onsubmit="return validate(this)" method="POST">
     <div>
         <label for="act_choice">From</label>
         <select name="account1">
-        <?php foreach($accounts as $a):?>
+        <?php foreach($myAccounts as $a):?>
             <?php if (se($a, "account_type", "", false) != "loan" && se($a, "active", "", false) != 0) : ?>
                 <option value="<?php se($a,'id');?>"><?php se($a, "account_number");?></option>
             <?php endif; ?>
         <?php endforeach;?>
         </select>
     </div>
+    <h3>Receiver Info</h3>
     <div>
-        <label for="act_choice_2">To</label>
-        <select name="account2">
-        <?php foreach($accounts as $a):?>
-            <?php if (se($a, "active", "", false) != 0) : ?>
-                <option value="<?php se($a,'id');?>"><?php se($a, "account_number");?></option>
-            <?php endif; ?>
-        <?php endforeach;?>
-        </select>
+        <label for="last_name">Last Name</label>
+        <input type="text" name=last_name required placeholder="Enter receiver's last name."/>
+    </div>
+    <div>
+        <label for="act_choice_2">Number</label>
+        <input type="text" name=account2 required placeholder="Enter last 4 digits."/>
     </div>
     <div>
         <label for="trans">Transaction</label>
@@ -55,7 +66,6 @@ $accounts = $stmt->fetchAll();
         }
         return true;
     }
-
 </script>
 
 <?php
@@ -63,18 +73,10 @@ $accounts = $stmt->fetchAll();
         $trans = se($_POST, "trans", "", false); 
         $memo = se($_POST, "memo", "", false);
         $account_id = se($_POST, "account1", "", false);
-        $account_id2 = se($_POST, "account2", "", false);
-        $loanPH = 0.0;
-        $active_val = 0;
 
         $stmt = $db->prepare("SELECT id, account_number, balance FROM Accounts WHERE user_id = :uid AND id = :id");
         $stmt->execute([":uid" => get_user_id(), ":id" => $account_id]);
         $act_1 = $stmt->fetch();
-
-        $stmt = $db->prepare("SELECT account_type, balance, active FROM Accounts WHERE user_id = :uid AND id = :id");
-        $stmt->execute([":uid" => get_user_id(), ":id" => $account_id2]);
-        $act_2_type = se($stmt->fetch(), "account_type", "", false);
-        $act_2_bal = se($stmt->fetch(), "balance", "", false);
 
         $hasError = false;
 
@@ -83,20 +85,14 @@ $accounts = $stmt->fetchAll();
             $hasError = true;
         }
 
-        if (intval($trans) > se($act_1, "balance", "", false)) {
+        if (intval($trans) > se($act_1, "balance", 0, false)) {
             flash("That value exceeds the account balance!", "warning");
             $hasError = true;
         }
 
         if (!$hasError) {
             flash("Transfer successful!", "success");
-            do_bank_action($account_id, $account_id2, $trans, "transfer", $memo);
-            if ($act_2_type == "loan" && intval($act_2_bal) == 0) {
-                $query = "UPDATE Accounts set apy = :apy, active = :act WHERE id = :aid";
-                $stmt = $db->prepare($query);
-                $stmt->execute([":aid" => $account_id2, ":apy" => $loanPH, ":act" => $active_val]);
-            }
-            redirect("view_accounts.php");
+            do_bank_action($account_id, $yourAccount, $trans, "ext-transfer", $memo);
         }
     }
 ?>
