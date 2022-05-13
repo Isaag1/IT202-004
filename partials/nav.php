@@ -47,9 +47,9 @@ $db = getDB();
                             Admin Roles
                         </a>
                         <ul class="dropdown-menu bg-warning" aria-labelledby="rolesDropdown">
-                            <li><a class="dropdown-item" href="<?php echo get_url('admin/create_role.php'); ?>">Create</a></li>
+                            <li><a class="dropdown-item" href="<?php echo get_url('admin/create_role.php'); ?>">Create Roles</a></li>
                             <li><a class="dropdown-item" href="<?php echo get_url('admin/list_roles.php'); ?>">List</a></li>
-                            <li><a class="dropdown-item" href="<?php echo get_url('admin/assign_roles.php'); ?>">Assign</a></li>
+                            <li><a class="dropdown-item" href="<?php echo get_url('admin/assign_roles.php'); ?>">Assign Roles</a></li>
                             <li><a class="dropdown-item" href="<?php echo get_url('admin/search_users.php'); ?>">Search Users</a></li>
                         </ul>
                     </li>
