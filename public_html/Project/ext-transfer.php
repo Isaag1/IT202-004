@@ -6,6 +6,7 @@ $db = getDB();
 $stmt = $db->prepare("SELECT id, account_number, balance, account_type, active FROM Accounts WHERE user_id = :uid");
 //$stmt->execute([":uid" => get_user_id()]);
 $myAccounts = $stmt->fetchAll();
+//.
 
 $lastName = se($_POST, "last_name", "", false);
 $account_id2 = se($_POST, "id", "", false);
