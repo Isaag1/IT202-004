@@ -43,6 +43,7 @@
     - [x] \(03/09/2022) User will be able to edit their profile
         -  [Milestone 1](https://github.com/Isaag1/IT202-004/blob/Milestone1/public_html/Project/milestone1.md)
         - [https://iag8-prod.herokuapp.com/Project/profile.php](https://iag8-prod.herokuapp.com/Project/profile.php)
+
 - Milestone 2
     - [x] \(05/13/2022 of completion) Create the Accounts table (id, account_number [unique, always 12 characters], user_id, balance (default 0), account_type, created, modified)
         - [Milestone 2](https://github.com/Isaag1/IT202-004/blob/Milestone2/public_html/Project/milestone2.md)
