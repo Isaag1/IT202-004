@@ -4,7 +4,7 @@ is_logged_in(true);
 
 $db = getDB();
 $stmt = $db->prepare("SELECT id, account_number, account_type, balance, active FROM Accounts WHERE user_id = :uid");
-$stmt->execute([":uid" => get_user_id()]);
+//$stmt->execute([":uid" => get_user_id()]);
 $accounts = $stmt->fetchAll();
 ?>
 
