@@ -43,21 +43,29 @@
     - [x] \(03/09/2022) User will be able to edit their profile
         -  [Milestone 1](https://github.com/Isaag1/IT202-004/blob/Milestone1/public_html/Project/milestone1.md)
         - [https://iag8-prod.herokuapp.com/Project/profile.php](https://iag8-prod.herokuapp.com/Project/profile.php)
+
 - Milestone 2
-    - [] \(mm/dd/yyyy of completion) Create the Accounts table (id, account_number [unique, always 12 characters], user_id, balance (default 0), account_type, created, modified)
-  -  Link to related .md file: [Link Name](link url)
-    - [] \(mm/dd/yyyy of completion) Create the Transactions table (see reference at end of document)
-  -  Link to related .md file: [Link Name](link url)
-    - [] \(mm/dd/yyyy of completion) Dashboard page
-  -  Link to related .md file: [Link Name](link url)
-    - [] \(mm/dd/yyyy of completion) User will be able to create a checking account
-  -  Link to related .md file: [Link Name](link url)
-    - [] \(mm/dd/yyyy of completion) User will be able to list their accounts
-  -  Link to related .md file: [Link Name](link url)
-    - [] \(mm/dd/yyyy of completion) User will be able to click an account for more information (a.k.a Transaction History page)
-  -  Link to related .md file: [Link Name](link url)
-    - [] \(mm/dd/yyyy of completion) User will be able to deposit/withdraw from their account(s)
-  -  Link to related .md file: [Link Name](link url)
+    - [x] \(05/13/2022 of completion) Create the Accounts table (id, account_number [unique, always 12 characters], user_id, balance (default 0), account_type, created, modified)
+        - [Milestone 2](https://github.com/Isaag1/IT202-004/blob/Milestone2/public_html/Project/milestone2.md)
+        - 
+    - [x] \(05/13/2022 of completion) Create the Transactions table (see reference at end of document)
+        - [Milestone 2](https://github.com/Isaag1/IT202-004/blob/Milestone2/public_html/Project/milestone2.md)
+       - 
+    - [x] \(05/13/2022 of completion) Dashboard page
+        - [Milestone 2](https://github.com/Isaag1/IT202-004/blob/Milestone2/public_html/Project/milestone2.md)
+        - [https://iag8-prod.herokuapp.com/Project/dashboard.php](https://iag8-prod.herokuapp.com/Project/dashboard.php)
+    - [x] \(05/13/2022 of completion) User will be able to create a checking account
+        - [Milestone 2](https://github.com/Isaag1/IT202-004/blob/Milestone2/public_html/Project/milestone2.md)
+        - [https://iag8-prod.herokuapp.com/Project/create_account.php](https://iag8-prod.herokuapp.com/Project/create_account.php)
+    - [x] \(05/13/2022 of completion) User will be able to list their accounts
+        - [Milestone 2](https://github.com/Isaag1/IT202-004/blob/Milestone2/public_html/Project/milestone2.md)
+        - [https://iag8-prod.herokuapp.com/Project/view_accounts.php](https://iag8-prod.herokuapp.com/Project/view_accounts.php)
+    - [x] \(05/13/2022 of completion) User will be able to click an account for more information (a.k.a Transaction History page)
+        - [Milestone 2](https://github.com/Isaag1/IT202-004/blob/Milestone2/public_html/Project/milestone2.md)
+        - [https://iag8-prod.herokuapp.com/Project/new_transaction.php](https://iag8-prod.herokuapp.com/Project/new_transaction.php)
+    - [x] \(05/13/2022 of completion) User will be able to deposit/withdraw from their account(s)
+        - [Milestone 2](https://github.com/Isaag1/IT202-004/blob/Milestone2/public_html/Project/milestone2.md)
+        - [https://iag8-prod.herokuapp.com/Project/new_transaction.php](https://iag8-prod.herokuapp.com/Project/new_transaction.php)
   
   - Milestone 3
   - (duplicate template here for Milestone 1 features)

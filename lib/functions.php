@@ -192,7 +192,7 @@ function do_bank_action($account1, $account2, $amountChange, $type, $memo = ""){
     $stmt->execute([":account_id" => $account2]);
     $a2total = se($stmt->fetch(), "balance", 0, false);
 
-  /*  $a1total += ($amountChange*-1);
+    $a1total += ($amountChange*-1);
     $a2total += $amountChange;
 
     $query = "INSERT INTO `Transactions` (`account_src`, `account_des`, `bal_change`, `trans_type`, `exp_total`, `memo`) 
@@ -229,5 +229,5 @@ function calculate_apy($trans) {
 
 function frand($min, $max, $decimals = 0) {
     $scale = pow(10, $decimals);
-    return mt_rand($min * $scale, $max * $scale) / $scale;*/
+    return mt_rand($min * $scale, $max * $scale) / $scale;
 }
