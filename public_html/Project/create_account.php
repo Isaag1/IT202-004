@@ -4,7 +4,7 @@ is_logged_in(true);
 
 $db = getDB();
 $stmt = $db->prepare("SELECT id, account_number, balance, active FROM Accounts WHERE user_id = :uid");
-//$stmt->execute([":uid" => get_user_id()]);
+//$stmt->execute([":uid" => get_user_id()]); this causes display error
 $accounts = $stmt->fetchAll();
 ?>
 
