@@ -4,7 +4,7 @@
 ## Project Board Link:
 ## Website Link:https://iag8-prod.herokuapp.com/Project
 ## Your Name:Isaac Guerrero
-## link to video for final project: []
+## link to video for final project: [https://youtu.be/yjfM43UCpwU](https://youtu.be/yjfM43UCpwU)
  
 <!-- Line item / Feature template (use this for each bullet point) -- DO NOT DELETE THIS SECTION
  
@@ -86,7 +86,7 @@
     -  [Milestone 3](https://github.com/Isaag1/IT202-004/blob/Milestone3/public_html/Project/milestone3.md)
     - [https://iag8-prod.herokuapp.com/Project/transfer_dash.php](https://iag8-prod.herokuapp.com/Project/transfer_dash.php)
    
- 
+ git checkout
   - Milestone 4
     - [] \(05/13/2022 of completion)User can set their profile to be public or private (will need another column in Users table)
     - [Milestone4](https://github.com/Isaag1/IT202-004/blob/Milestone4/public_html/Project/milestone4.md)
